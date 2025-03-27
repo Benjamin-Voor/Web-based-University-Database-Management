@@ -1,0 +1,13 @@
+# Terminal commands:
+$ php /var/www/html/test-cli.php # Opening this file should verify that the PHP command-line-interface is functional. Also, I typed the wrong password too many times, so now this is the only way to verify that mysql is up and running
+$ sudo systemctl status MySQL # This verifies that MySQL is installed
+$ sudo systemctl status apache2 # This verifies that apache2 is up and running
+
+# "Websites":
+Verify [ip address show]
+Verify [ip address show]/info.php
+Verify [ip address show]/test-db-connection.php
+
+# Extra commands:
+sudo ufw app list
+sudo ufw status
