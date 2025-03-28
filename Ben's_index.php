@@ -59,40 +59,40 @@
 
             // Create table and insert sample data
             $sql = "
-                CREATE TABLE IF NOT EXISTS courses (
+                CREATE TABLE IF NOT EXISTS course (
                     course_id INT AUTO_INCREMENT PRIMARY KEY,
-                    course_name VARCHAR(255) NOT NULL,
+                    title VARCHAR(255) NOT NULL,
                     instructor VARCHAR(255) NOT NULL
                 );
-                INSERT INTO courses (course_name, instructor) VALUES 
+                INSERT INTO course (title, instructor) VALUES 
                     ('Course 1', 'Luis Jaimes'),
                     ('Course 2', 'Luis Jaimes'),
                     ('Course 3', 'Other Instructor')
-                ON DUPLICATE KEY UPDATE course_name=VALUES(course_name), instructor=VALUES(instructor);
+                ON DUPLICATE KEY UPDATE title=VALUES(title), instructor=VALUES(instructor);
             ";
             $conn->exec($sql);
 
             // Fetch courses taught by the instructor using a prepared statement
-            $query = "SELECT * FROM courses WHERE instructor = :instructor";
+            $query = "SELECT * FROM course WHERE instructor = :instructor";
             $stmt = $conn->prepare($query);
             $stmt->bindParam(':instructor', $instructor);
             $stmt->execute();
-            $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $course = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if ($courses) {
+            if ($course) {
                 echo "<h2>Courses Taught by $instructor</h2>";
                 echo "<table border='1'>";
                 echo "<tr><th>Course ID</th><th>Course Name</th><th>Instructor</th></tr>";
-                foreach ($courses as $course) {
+                foreach ($course as $course) {
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($course['course_id']) . "</td>";
-                    echo "<td>" . htmlspecialchars($course['course_name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($course['title']) . "</td>";
                     echo "<td>" . htmlspecialchars($course['instructor']) . "</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
             } else {
-                echo "No courses found for instructor $instructor.";
+                echo "No course found for instructor $instructor.";
             }
         } catch (PDOException $e) {
             echo "Connection failed: " . htmlspecialchars($e->getMessage());
@@ -112,26 +112,26 @@
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // Fetch courses by department
-            $query = "SELECT * FROM courses WHERE department = :department";
+            // Fetch course by department
+            $query = "SELECT * FROM course WHERE department = :department";
             $stmt = $conn->prepare($query);
             $stmt->bindParam(':department', $department);
             $stmt->execute();
-            $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $course = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if ($courses) {
+            if ($course) {
                 echo "<h2>Courses in $department Department</h2>";
                 echo "<table border='1'>";
                 echo "<tr><th>Course ID</th><th>Course Name</th></tr>";
-                foreach ($courses as $course) {
+                foreach ($course as $course) {
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($course['course_id']) . "</td>";
-                    echo "<td>" . htmlspecialchars($course['course_name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($course['title']) . "</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
             } else {
-                echo "No courses found for department $department.";
+                echo "No course found for department $department.";
             }
         } catch (PDOException $e) {
             echo "Connection failed: " . htmlspecialchars($e->getMessage());
@@ -151,10 +151,10 @@
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // Fetch courses by student
+            // Fetch course by student
             $query = "
-                SELECT c.course_id, c.course_name 
-                FROM courses c
+                SELECT c.course_id, c.title 
+                FROM course c
                 JOIN enrollments e ON c.course_id = e.course_id
                 JOIN students s ON e.student_id = s.student_id
                 WHERE s.student_name = :student
@@ -162,21 +162,21 @@
             $stmt = $conn->prepare($query);
             $stmt->bindParam(':student', $student);
             $stmt->execute();
-            $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $course = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-            if ($courses) {
+            if ($course) {
                 echo "<h2>Courses Enrolled by $student</h2>";
                 echo "<table border='1'>";
                 echo "<tr><th>Course ID</th><th>Course Name</th></tr>";
-                foreach ($courses as $course) {
+                foreach ($course as $course) {
                     echo "<tr>";
                     echo "<td>" . htmlspecialchars($course['course_id']) . "</td>";
-                    echo "<td>" . htmlspecialchars($course['course_name']) . "</td>";
+                    echo "<td>" . htmlspecialchars($course['title']) . "</td>";
                     echo "</tr>";
                 }
                 echo "</table>";
             } else {
-                echo "No courses found for student $student.";
+                echo "No course found for student $student.";
             }
         } catch (PDOException $e) {
             echo "Connection failed: " . htmlspecialchars($e->getMessage());
