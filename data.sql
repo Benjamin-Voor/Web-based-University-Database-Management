@@ -1,0 +1,63 @@
+USE onlineStore;
+
+delete from customers;
+delete from orders;
+delete from products;
+delete from suppliers;
+delete from restock;
+
+insert into customers values( '1', 'Richard', 'Jones' );
+insert into customers values( '2', 'Samantha', 'Aubrey' );
+insert into customers values( '3', 'Bob', 'Lingal' );
+insert into customers values( '4', 'Luke', 'Smith' );
+insert into customers values( '5', 'Damian', 'Jones' );
+insert into customers values( '6', 'Miles', 'Morales' );
+insert into customers values( '7', 'Peter', 'Parker' );
+insert into customers values( '8', 'John', 'Pork' );
+insert into customers values( '9', 'Sherlock', 'Holmes' );
+insert into customers values( '10', 'Charles', 'Darwin' );
+insert into customers values( '11', 'Charlie', 'Brown' );
+insert into customers values( '12', 'Chuck', 'Jones' );
+
+insert into suppliers values( '1', 'Supplying United', '123 Sesame Street, New York City, NY' );
+insert into suppliers values( '2', 'The Box Bros', '883 McLovin Drive, Pittsburg, PA' );
+insert into suppliers values( '3', 'Super Shipping', '1554 Kyle North, Tallahassee, FL' );
+insert into suppliers values( '4', 'Crazy Cargo', '523 Louis Ave, Lakeland, FL' );
+insert into suppliers values( '5', 'Steve''s Stash', '523 Louis Ave, Lakeland, FL' );
+insert into suppliers values( '6', 'DLZ Shipping Solutions', '1987 Fredrick Ave, Boston, MA' );
+
+insert into products values( '1', 'Spoon', '10.23', '20', '2', 'kitchen' );
+insert into products values( '2', 'Fork', '11.33', '34', '3', 'kitchen' );
+insert into products values( '3', 'Knife', '9.30', '31455', '1', 'kitchen' );
+insert into products values( '4', 'Pot', '80.43', '4', '1', 'kitchen' );
+insert into products values( '5', 'Pan', '90.20', '1', '2', 'kitchen' );
+insert into products values( '6', 'Spatula', '99.99', '334146', '4', 'kitchen' );
+insert into products values( '7', 'Deluxe Egg Whisker 9000', '119.99', '87', '2', 'kitchen' );
+insert into products values( '8', '5 Million Termites', '2.00', '1', '3', 'misc' );
+insert into products values( '9', 'Bag of Hotdogs', '10.99', '20', '6', 'food' );
+insert into products values( '10', '9lbs of Unidentified Ground Meat', '8.99', '22', '4', 'food' );
+insert into products values( '11', 'Handheld Laser Made Specifically to Shine at Planes', '30.99', '3', '4', 'misc' );
+insert into products values( '12', '5 Tons of Dirt', '300.00', '20', '6', 'crafts' );
+insert into products values( '13', 'Ingot of Pure Copper', '15.00', '10', '3', 'crafts' );
+insert into products values( '14', 'Anvil', '12.30', '20', '6', 'crafts' );
+insert into products values( '15', 'A Whole Pine Tree', '9.10', '20', '6', 'crafts' );
+insert into products values( '16', 'Diamond Armor, Full Set', '199.99', '8', '5', 'crafts' );
+insert into products values( '17', 'Ender Pearl', '20.00', '30', '5', 'crafts' );
+insert into products values( '18', 'Flint and Steel', '90.00', '30', '5', 'crafts' );
+insert into products values( '19', 'Lava Chicken, Whole', '10.00', '50', '5', 'food' );
+insert into products values( '20', 'Top Hat Bear Animatronic Suit', '19.99', '19', '6', 'misc' );
+insert into products values( '21', 'Top Hat Bear Mask', '19.87', '87', '6', 'misc' );
+
+insert into orders values( '1', '8', '1', '3', '1993-12-30' );
+insert into orders values( '2', '2', '3', '2', '1993-12-31' );
+insert into orders values( '3', '1', '6', '1', '1993-12-1' );
+insert into orders values( '4', '6', '25', '1', '1993-12-2' );
+insert into orders values( '5', '7', '1', '7', '1993-11-8' );
+insert into orders values( '6', '10', '10', '5', '1993-10-30' );
+insert into orders values( '7', '15', '2', '4', '1993-12-2' );
+insert into orders values( '8', '13', '2', '6', '1993-11-20' );
+insert into orders values( '9', '4', '2', '3', '1993-12-24' );
+insert into orders values( '10', '4', '1', '1', '1993-12-23' );
+insert into orders values( '11', '7', '7', '2', '1993-12-24' );
+insert into orders values( '12', '1', '14', '5', '1993-11-25' );
+insert into orders values( '13', '7', '5', '4', '1993-12-5' );

@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(153, 197, 255);
+}
+
+#header {
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: white;
+}
+
+#navigation_bar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    position: relative;
+}
+
+#navigation_bar > span {
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: aliceblue;
+    border-width: 0;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-style: solid;
+    position: relative;
+}
+
+#navigation_bar > span > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#row {
+    width: 100%;
+    display: flex;
+    background-color: white;
+}
+
+#row > span {
+    display: inline;
+    border-width: 4px;
+    border-color: black;
+    border-style: solid;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+#column_left {
+    width: 80%;
+}
+
+#column_right {
+    width: 20%;
+}
+
+#search_bar {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    padding-bottom: 1%;
+}
+
+#filter_box {
+    width: 3em;
+}
+
+#display_menu {
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 4px;
+}
+
+#display_results {
+    height: 100%;
+    overflow: scroll;
+    height: 400px;
+}
+
+#display_results > table {
+    font-size: 2em;
+    width: 100%;
+}
+
+th, td {
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#cart_results {
+    margin-top: 10px;
+    border-top-style: solid;
+    border-top-color: black;
+    border-top-width: 4px;
+    height: 100%;
+}
+
+#shopping_form > div {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#admin_search_bar {
+    padding-bottom: 1%;
+}
