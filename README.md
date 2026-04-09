@@ -1,4 +1,4 @@
-![A 3-panel Dilbert comic. In the first panel, the manager character is standing on the left-side behind Dilbert, while Dilbert -- the developer character -- sits at his computer desk on the right-hand-side. The manager says to Dilbert, "I think we should build an SQL database." Dilbert thinks, "uh-oh". In the second panel, the camera looks Dilbert in the face. Dilbert wonders, "Does he understand what he said [sic] or is it something he saw in a trade magazine ad?" In the third panel, Dilbert turns in his chair -- now facing the reader. Dilbert says, "What color do you want that database?" The manager narrows his eyes and says, "I think mauve has the most RAM."](https://web.archive.org/web/20210322012431/https://i.redd.it/agrd8yb9mll61.jpg)
+![A 3-panel Dilbert comic. In the first panel, the manager character is standing on the left-side behind Dilbert, while Dilbert -- the developer character -- sits at his computer desk on the right-hand-side. The manager says to Dilbert, "I think we should build an SQL database." Dilbert thinks, "uh-oh". In the second panel, the camera looks Dilbert in the face. Dilbert wonders, "Does he understand what he said [sic] or is it something he saw in a trade magazine ad?" In the third panel, Dilbert turns in his chair -- now facing the reader. Dilbert says, "What color do you want that database?" The manager narrows his eyes and says, "I think mauve has the most RAM."](https://web.archive.org/web/20240201080531/http://pbs.twimg.com/media/BoUn8iUIgAAq-CU.png)
 
 # Web-based University Database Management
 
@@ -71,6 +71,6 @@ We recommend checking out the references we cite for more in-depth training on s
 You run this code at your own risk. We are not responsible if your server and client data are leaked. Beyond that, we recommend sending impersonal information on a trustworthy internet connection.
 
 # References
-Link to the Dilbert comic, posted on Reddit, then archived with the Wayback Machine: https://web.archive.org/web/20210322012431/https://www.reddit.com/r/ProgrammerHumor/comments/lzplto/green_has_more_ram/
+Link to the Dilbert comic, posted on Reddit, then archived with the Wayback Machine: https://web.archive.org/web/20230601034548/https://www.reddit.com/r/ProgrammerHumor/comments/26gyn6/i_think_we_should_build_a_sql_database/
 
-  Link to the original Reddit post: https://www.reddit.com/r/ProgrammerHumor/comments/lzplto/green_has_more_ram/
+  Link to the original Reddit post: https://www.reddit.com/r/ProgrammerHumor/comments/26gyn6/i_think_we_should_build_a_sql_database/
