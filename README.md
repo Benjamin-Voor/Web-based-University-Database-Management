@@ -2,7 +2,7 @@
 
 # Web-based University Database Management
 
-### By: [Benjamin Voor](https://github.com/Benjamin-Voor), [Matthew Powrie](https://github.com/jabstrings), [Matthew Russo](https://github.com/mrusso5290), and [Connor Beard](https://github.com/cb05208)
+### By: [Benjamin Voor](https://github.com/Benjamin-Voor), [Matthew Powrie](https://github.com/jabstrings), [Matthew Russo](https://github.com/Matthew-Russo-311), and [Connor Beard](https://github.com/cb05208)
 
 ### Instructor: Associate professor Dr. Luis Gabriel Jaimes
   * Entry in Florida Polytechnic directory: https://floridapoly.edu/faculty/bios/luis-jaimes/
